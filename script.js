@@ -1,3 +1,7 @@
+/**
+ * Фронтенд-бандл: тема, меню, реклама (gtag), форма заявки → Telegram.
+ * Безпека: токен Telegram-бота у видимому JS доступний усім відвідувачам — для бойового середовища краще проксі через сервер / serverless.
+ */
 const CURRENT_YEAR = new Date().getFullYear().toString();
 const THEME_MODE_KEY = "site-theme-mode";
 const body = document.body;

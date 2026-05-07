@@ -79,6 +79,12 @@ html {
   height: 100%;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   min-height: 100%;
@@ -1082,6 +1088,11 @@ body.premium-site * {
   box-sizing: border-box;
 }
 
+/* Запобігає горизонтальному скролу на вузьких екранах (контент не «вилазить» за 100%). */
+body.premium-site {
+  overflow-x: clip;
+}
+
 .premium-site img {
   max-width: 100%;
   display: block;
@@ -1826,6 +1837,14 @@ body.premium-site * {
 
 .premium-site .article-wrap {
   padding: 42px;
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.premium-site .article-wrap pre,
+.premium-site .article-wrap table {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .premium-site .article-wrap h2 {
@@ -1929,6 +1948,28 @@ body.blog-page.premium-site.theme-night {
   position: relative;
   z-index: 1;
   width: min(840px, calc(100% - 40px));
+}
+
+@media (max-width: 420px) {
+  .premium-site .container {
+    width: min(1180px, calc(100% - 28px));
+  }
+
+  .premium-site .blog-shell {
+    width: min(840px, calc(100% - 28px));
+  }
+
+  .premium-site .nav {
+    column-gap: 10px;
+  }
+
+  .premium-site .brand {
+    font-size: 1.05rem;
+  }
+
+  .premium-site .brand span {
+    font-size: 0.88rem;
+  }
 }
 
 .premium-site .blog-breadcrumbs {
