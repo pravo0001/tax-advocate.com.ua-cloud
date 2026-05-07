@@ -1932,6 +1932,50 @@ body.premium-site * {
   align-self: flex-start;
 }
 
+/* Сторінка блогу: hero і тематичний рядок вирівняні по центру як головний заголовок */
+body.blog-page.premium-site .page-hero .panel {
+  text-align: center;
+}
+
+body.blog-page.premium-site .page-hero .breadcrumbs {
+  justify-content: center;
+}
+
+body.blog-page.premium-site .page-hero .blog-intro-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.blog-page.premium-site .page-hero .blog-toc {
+  justify-content: center;
+}
+
+body.blog-page.premium-site .blog-grid-page .blog-chapter {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+body.blog-page.premium-site .blog-grid-page .blog-chapter-title {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.28rem, 2.25vw, 1.72rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-transform: none;
+  color: var(--text-strong);
+  line-height: 1.18;
+  max-width: min(100%, 34rem);
+}
+
+body.blog-page.premium-site .blog-grid-page .blog-chapter-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 10px;
+}
+
 .premium-site .legal-refs {
   margin-top: 36px;
   padding: 22px 26px;
