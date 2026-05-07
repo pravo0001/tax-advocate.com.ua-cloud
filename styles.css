@@ -2082,17 +2082,22 @@ body.premium-site.uniform-page-bg::before {
     grid-template-columns: 1fr;
   }
 
+  .premium-site .stats-row {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
   .premium-site .floating-cta {
     right: 12px;
     bottom: 12px;
   }
 }
 
-/* === Stats row (real court cases) === */
+/* === Stats row (real court cases) — same 3-col track + gap as .case-grid === */
 .premium-site .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
   margin: 28px 0 36px;
 }
 
@@ -2101,7 +2106,7 @@ body.premium-site.uniform-page-bg::before {
   flex-direction: column;
   align-items: flex-start;
   gap: 6px;
-  padding: 22px 24px;
+  padding: 26px;
   text-align: left;
 }
 
@@ -2130,7 +2135,7 @@ body.premium-site.uniform-page-bg::before {
 
 @media (max-width: 480px) {
   .premium-site .stats-row {
-    gap: 10px;
+    gap: 14px;
   }
   .premium-site .stat-number {
     font-size: 2rem;
