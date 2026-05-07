@@ -1235,6 +1235,29 @@ body.premium-site * {
   background: var(--header-scrim);
 }
 
+/* Хедер: єдина CTA «Зв'язок» — прозора капсула з білою обводкою */
+.premium-site .nav-actions > .btn-light {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  color: #fff;
+  padding: 10px 26px;
+  min-height: 44px;
+  box-shadow: none;
+}
+
+.premium-site .nav-actions > .btn-light:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.58);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.premium-site .nav-actions > .btn-light:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.65);
+  outline-offset: 3px;
+}
+
 .premium-site .btn-toggle {
   width: 44px;
   min-width: 44px;
@@ -2409,8 +2432,11 @@ body.premium-site.uniform-page-bg::before {
     justify-self: end;
   }
 
-  .premium-site .nav-actions .btn-light {
-    display: none;
+  .premium-site .nav-actions > .btn-light {
+    display: inline-flex;
+    padding: 8px 18px;
+    min-height: 42px;
+    font-size: 0.92rem;
   }
 
   .premium-site .menu {
